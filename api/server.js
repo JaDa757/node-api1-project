@@ -24,6 +24,7 @@ server.get('/api/users/:id', (req, res) => {
                     message: "The user with the specified ID does not exist",
                 })
             }
+            res.json(user)
         })
         .catch(err => {
             res.status(500).json({
